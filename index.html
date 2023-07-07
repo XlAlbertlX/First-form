@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>form</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+<section class="main">
+    <div class="form">
+        <div class="form-value">
+            <form method="post" id="form-reg" name="reg">
+                <H2>Регистрация</H2>
+                <div id="form__item1" class="form__item">
+                    <div id="row" class="row">
+                        <ion-icon name="person-circle-outline"></ion-icon>
+                            <input id="nick" name="nick" pattern="[A-Za-z0-9\-_]{5,16}" required>
+                        <label for="">Ник:</label>
+                    </div>
+                </div>
+
+                <div class="form__item">
+                    <div class="row">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <input id="email" type="email" name="email" required>
+                        <label for="">E-mail:</label>
+                    </div>
+                    <div id="errorEmail" class="error"></div>
+                </div>
+
+                <div id="form__item3" class="form__item">
+                    <div class="row">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input id="pass" type="password" name="pass" pattern="^[a-zA-Z0-9!@#$%^&*]{6,64}$" required>
+                        <label for="">Пароль:</label>
+                    </div>
+                </div>
+
+                <div id="form__item4" class="form__item">
+                    <div class="row">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input id="pass2" type="password" name="pass2" required>
+                        <label for="">Подтвердите пароль:</label>
+                    </div>
+
+                </div>
+
+                <input type="submit" value="зарегистрироваться" class="submitBotton">
+            </form>
+        </div>
+    </div>
+</section>
+<script src="js/erros/invalidPass.js"></script>
+<script src="js/erros/invalidNick.js"></script>
+<script src="js/erros/inputCorrect.js"></script>
+</body>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</html>
